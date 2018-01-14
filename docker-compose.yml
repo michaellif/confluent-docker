@@ -2,7 +2,7 @@
 version: '2'
 services:
   zookeeper:
-    image: dockyard.cloud.capitalone.com/confluentinc/cp-zookeeper
+    image: confluentinc/cp-zookeeper
     hostname: zookeeper
     ports:
       - "2181:2181"
@@ -11,7 +11,7 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
 
   kafka:
-    image: dockyard.cloud.capitalone.com/confluentinc/cp-kafka
+    image: confluentinc/cp-kafka
     hostname: kafka
     depends_on:
       - zookeeper
